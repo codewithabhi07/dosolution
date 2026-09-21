@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sans), "Montserrat", system-ui, sans-serif;
+
+  --color-luxury-black: #08090d;
+  --color-luxury-midnight: #0d0f15;
+  --color-luxury-card: #141722;
+  --color-luxury-card-hover: #1c202e;
+  
+  --color-gold-champagne: #c5a059;
+  --color-gold-light: #edd8a6;
+  --color-gold-rich: #d4af37;
+  --color-gold-dark: #8f6f2d;
+  --color-gold-glow: rgba(212, 175, 55, 0.2);
+
+  --color-ivory-warm: #fbf9f5;
+  --color-ivory-soft: #f5efe6;
+  --color-ivory-sand: #eee6d8;
+  --color-ivory-muted: #8c877d;
+  --color-ivory-dark: #2a2723;
+
+  --color-burgundy-royal: #42101e;
+  --color-burgundy-deep: #250810;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #08090d;
+  color: #fbf9f5;
+}
+
+body {
+  background-color: #08090d;
+  color: #fbf9f5;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle luxury film grain background */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Liquid 24k Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5e4be 0%, #d4af37 45%, #967026 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Liquid Gold Gradient Button Background */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #dfc07b 0%, #c5a059 50%, #9e7933 100%);
+}
+
+.bg-gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #ecd396 0%, #d4af37 50%, #b28c3e 100%);
+}
+
+/* Thin luxury gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
+}
+
+.gold-divider-dark {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(143, 111, 45, 0.35), transparent);
+}
+
+/* Subtle image shimmer animation */
+@keyframes subtle-zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-subtle-zoom {
+  animation: subtle-zoom 22s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #08090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2e3b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Hide scrollbar for mobile pill filter lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Standard Luxury Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px -8px rgba(212, 175, 55, 0.25);
+}
+
+.gold-border-shine {
+  position: relative;
+}
+.gold-border-shine::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.5), transparent, rgba(212, 175, 55, 0.5));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Prevent accidental iOS text zoom on form focus */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
