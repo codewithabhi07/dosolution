@@ -109,7 +109,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="p-2.5 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all flex items-center justify-center"
                   >
                     <InstagramIcon className="w-4 h-4" />
                   </a>
@@ -118,7 +118,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"
-                    className="p-2.5 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all flex items-center justify-center"
                   >
                     <YouTubeIcon className="w-4 h-4" />
                   </a>
@@ -127,7 +127,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="WhatsApp"
-                    className="p-2.5 rounded-full bg-white/5 hover:bg-[#25D366]/20 text-[#fcfbf7] hover:text-[#25D366] border border-white/10 hover:border-[#25D366]/40 transition-all"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#25D366]/20 text-[#fcfbf7] hover:text-[#25D366] border border-white/10 hover:border-[#25D366]/40 transition-all flex items-center justify-center"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                   </a>

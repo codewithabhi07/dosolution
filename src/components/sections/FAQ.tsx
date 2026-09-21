@@ -13,28 +13,28 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-24 md:py-32 bg-[#08090d] text-[#fbf9f5]">
-      <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
+    <section id="faq" className="relative py-18 md:py-32 bg-[#08090d] text-[#fbf9f5]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#edd8a6] font-semibold mb-3">
             <HelpCircle className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>COMMON INQUIRIES</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
             FREQUENTLY ASKED QUESTIONS
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="text-sm sm:text-base text-[#a39e94] font-light max-w-xl mx-auto">
+          <p className="text-xs sm:text-base text-[#a39e94] font-light max-w-xl mx-auto">
             Everything you need to know about booking DO Solution for your wedding day.
           </p>
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {FAQ_DATA.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -45,13 +45,13 @@ export default function FAQ() {
                 <button
                   onClick={() => toggleAccordion(index)}
                   aria-expanded={isOpen}
-                  className="w-full p-6 sm:p-7 flex items-center justify-between text-left cursor-pointer hover:bg-white/[0.02] transition-colors"
+                  className="w-full p-4 sm:p-7 flex items-center justify-between text-left cursor-pointer hover:bg-white/[0.02] transition-colors min-h-[56px]"
                 >
-                  <span className="font-serif text-lg sm:text-xl text-[#fbf9f5] font-normal pr-4 tracking-wide">
+                  <span className="font-serif text-base sm:text-xl text-[#fbf9f5] font-normal pr-3 sm:pr-4 tracking-wide">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border border-[#c5a059]/30 flex items-center justify-center shrink-0 text-[#edd8a6] transition-transform duration-300 ${
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-[#c5a059]/30 flex items-center justify-center shrink-0 text-[#edd8a6] transition-transform duration-300 ${
                       isOpen ? "rotate-180 bg-[#c5a059]/20 border-[#c5a059]" : ""
                     }`}
                   >
@@ -60,7 +60,7 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 sm:px-7 pb-6 pt-1 text-sm text-[#a39e94] font-light leading-relaxed border-t border-white/5 animate-fadeIn">
+                  <div className="px-4 sm:px-7 pb-5 pt-1 text-xs sm:text-sm text-[#a39e94] font-light leading-relaxed border-t border-white/5 animate-fadeIn">
                     <p>{faq.answer}</p>
                   </div>
                 )}

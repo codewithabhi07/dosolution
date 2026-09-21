@@ -13,7 +13,7 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#08080a]"
+      className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[#08080a]"
     >
       {/* Cinematic Background Image with slow subtle zoom */}
       <div className="absolute inset-0 z-0">
@@ -33,26 +33,26 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16 flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-24 sm:pt-24 sm:pb-16 flex flex-col items-center">
         {/* Top Brand Label */}
-        <div className="inline-flex items-center space-x-3 mb-4 px-4 py-1.5 rounded-full border border-[#c8a97e]/30 bg-black/40 backdrop-blur-md">
+        <div className="inline-flex items-center space-x-2.5 sm:space-x-3 mb-4 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#c8a97e]/30 bg-black/40 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-[#c8a97e] animate-pulse" />
-          <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#e4cfae] font-medium">
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.28em] sm:tracking-[0.35em] text-[#e4cfae] font-medium">
             {SITE_CONFIG.brandName}
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="font-serif text-2xl min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#fcfbf7] leading-[1.18] sm:leading-[1.12] tracking-tight max-w-4xl mx-auto drop-shadow-lg px-2">
+        <h1 className="font-serif text-2xl min-[360px]:text-3xl min-[410px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#fcfbf7] leading-[1.2] sm:leading-[1.12] tracking-tight max-w-4xl mx-auto drop-shadow-lg px-2">
           "We Capture the Moments You'll Relive Forever."
         </h1>
 
         {/* Supporting Text */}
-        <div className="mt-5 sm:mt-6 space-y-2">
-          <p className="text-[11px] min-[380px]:text-xs sm:text-sm md:text-base uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#e4cfae] font-light">
+        <div className="mt-4 sm:mt-6 space-y-2">
+          <p className="text-[10.5px] min-[380px]:text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#e4cfae] font-light">
             Wedding Photography • Cinematography • Films
           </p>
-          <div className="flex items-center justify-center space-x-2.5 sm:space-x-3 text-[11px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] text-[#a39e94] uppercase font-light">
+          <div className="flex items-center justify-center space-x-2.5 sm:space-x-3 text-[10.5px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] text-[#a39e94] uppercase font-light">
             <span>Pune</span>
             <span className="text-[#c8a97e]">•</span>
             <span>Nashik</span>
@@ -62,10 +62,10 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
         </div>
 
         {/* Call to Actions */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full max-w-md px-4 sm:px-0">
+        <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full max-w-md px-2 sm:px-0">
           <Link
             href="#portfolio"
-            className="w-full sm:w-auto px-7 py-3.5 bg-[#c8a97e] hover:bg-[#dfc8a5] text-[#08080a] text-xs uppercase tracking-[0.25em] font-semibold rounded-sm transition-all duration-300 shadow-xl shadow-[#c8a97e]/15 flex items-center justify-center gap-2 group cursor-pointer"
+            className="w-full sm:w-auto px-7 py-3.5 bg-gold-gradient hover:bg-gold-gradient-hover text-[#08090d] text-xs uppercase tracking-[0.22em] font-bold rounded-sm transition-all duration-300 shadow-xl shadow-[#c8a97e]/20 flex items-center justify-center gap-2 group cursor-pointer min-h-[48px]"
           >
             <span>View Our Stories</span>
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -73,7 +73,7 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
 
           <Link
             href="#contact"
-            className="w-full sm:w-auto px-7 py-3.5 bg-black/40 hover:bg-[#c8a97e]/15 text-[#fcfbf7] hover:text-[#c8a97e] border border-[#c8a97e]/40 hover:border-[#c8a97e] text-xs uppercase tracking-[0.25em] font-medium rounded-sm backdrop-blur-md transition-all duration-300 flex items-center justify-center cursor-pointer"
+            className="w-full sm:w-auto px-7 py-3.5 bg-black/50 hover:bg-[#c8a97e]/15 text-[#fcfbf7] hover:text-[#c8a97e] border border-[#c8a97e]/40 hover:border-[#c8a97e] text-xs uppercase tracking-[0.22em] font-medium rounded-sm backdrop-blur-md transition-all duration-300 flex items-center justify-center cursor-pointer min-h-[48px]"
           >
             Book Your Date
           </Link>
@@ -94,10 +94,10 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
       </div>
 
       {/* Scroll to Explore Indicator */}
-      <div className="absolute bottom-20 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
+      <div className="absolute bottom-16 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
         <Link
           href="#about"
-          className="pointer-events-auto inline-flex flex-col items-center space-y-2 text-[10px] uppercase tracking-[0.3em] text-[#a39e94] hover:text-[#c8a97e] transition-colors"
+          className="pointer-events-auto inline-flex flex-col items-center space-y-1.5 text-[9.5px] sm:text-[10px] uppercase tracking-[0.28em] text-[#a39e94] hover:text-[#c8a97e] transition-colors"
         >
           <span>SCROLL TO EXPLORE ↓</span>
           <ArrowDown className="w-3.5 h-3.5 animate-bounce text-[#c8a97e]" />

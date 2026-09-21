@@ -20,35 +20,35 @@ export default function Cinematography() {
   ];
 
   return (
-    <section id="cinematography" className="relative py-24 md:py-32 bg-[#0a0b10] text-[#fbf9f5]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <section id="cinematography" className="relative py-18 md:py-32 bg-[#0a0b10] text-[#fbf9f5]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#edd8a6] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>MOTION PICTURES</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
             YOUR WEDDING, IN MOTION.
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="font-serif italic text-lg sm:text-xl text-[#edd8a6] max-w-xl mx-auto">
+          <p className="font-serif italic text-base sm:text-xl text-[#edd8a6] max-w-xl mx-auto">
             "Because some moments deserve more than a photograph."
           </p>
 
-          <p className="text-sm text-[#a39e94] font-light max-w-xl mx-auto mt-3">
+          <p className="text-xs sm:text-sm text-[#a39e94] font-light max-w-xl mx-auto mt-2.5 sm:mt-3">
             Sound design, genuine laughs, whispered vows, and sweeping cinematography that brings the spirit of your day alive for generations.
           </p>
 
           {/* Film Types Badge List */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
             {filmCategories.map((cat, i) => (
               <span
                 key={i}
-                className="text-[11px] uppercase tracking-wider text-[#edd8a6] px-3.5 py-1.5 rounded-full border border-[#c5a059]/30 bg-black/40 font-mono"
+                className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#edd8a6] px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-[#c5a059]/30 bg-black/40 font-mono"
               >
                 {cat}
               </span>
@@ -57,7 +57,7 @@ export default function Cinematography() {
         </div>
 
         {/* 4 Cinematic Film Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {CINEMATOGRAPHY_FILMS.map((film) => (
             <div
               key={film.id}
@@ -78,30 +78,30 @@ export default function Cinematography() {
 
                 {/* Circular Play Button with Royal Halo */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-black/60 border-2 border-[#d4af37] flex items-center justify-center text-[#edd8a6] group-hover:scale-110 group-hover:bg-[#c5a059] group-hover:text-black group-hover:border-transparent transition-all duration-300 shadow-2xl shadow-[#d4af37]/30 backdrop-blur-sm">
-                    <Play className="w-6 h-6 fill-current ml-0.5" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/60 border-2 border-[#d4af37] flex items-center justify-center text-[#edd8a6] group-hover:scale-110 group-hover:bg-[#c5a059] group-hover:text-black group-hover:border-transparent transition-all duration-300 shadow-2xl shadow-[#d4af37]/30 backdrop-blur-sm">
+                    <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
                   </div>
                 </div>
 
                 {/* Duration Tag */}
-                <div className="absolute bottom-4 right-4 z-10 flex items-center space-x-1.5 text-xs text-white/90 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded border border-[#c5a059]/30 font-mono">
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 z-10 flex items-center space-x-1.5 text-[11px] sm:text-xs text-white/90 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded border border-[#c5a059]/30 font-mono">
                   <Clock className="w-3 h-3 text-[#c5a059]" />
                   <span>{film.duration}</span>
                 </div>
 
                 {/* Film Type Tag */}
-                <div className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-widest text-[#edd8a6] bg-black/70 backdrop-blur-md px-3 py-1 rounded border border-[#c5a059]/30 font-mono">
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-10 text-[9.5px] sm:text-[10px] uppercase tracking-widest text-[#edd8a6] bg-black/70 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded border border-[#c5a059]/30 font-mono">
                   {film.type}
                 </div>
               </div>
 
               {/* Bottom Information */}
-              <div className="p-6 flex items-center justify-between">
+              <div className="p-4 sm:p-6 flex items-center justify-between">
                 <div>
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors">
+                  <h3 className="font-serif text-lg sm:text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors leading-tight">
                     {film.title}
                   </h3>
-                  <p className="text-xs text-[#a39e94] mt-1 font-light">
+                  <p className="text-xs text-[#a39e94] mt-0.5 sm:mt-1 font-light">
                     {film.couple} • {film.location}
                   </p>
                 </div>

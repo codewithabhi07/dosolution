@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, MapPin, Tag } from "lucide-react";
 import { PortfolioItem } from "@/types";
@@ -23,6 +23,8 @@ export default function Lightbox({
   onPrev,
 }: LightboxProps) {
   const currentItem = items[currentIndex];
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -33,6 +35,27 @@ export default function Lightbox({
     },
     [isOpen, onClose, onNext, onPrev]
   );
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 45;
+    const isRightSwipe = distance < -45;
+    if (isLeftSwipe) {
+      onNext();
+    } else if (isRightSwipe) {
+      onPrev();
+    }
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -54,8 +77,11 @@ export default function Lightbox({
       role="dialog"
       aria-modal="true"
       aria-label="Image Lightbox"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl animate-fadeIn transition-opacity duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-2xl animate-fadeIn transition-opacity duration-300 p-2 sm:p-4 select-none"
       onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Top Bar: Counter & Close */}
       <div
@@ -87,9 +113,9 @@ export default function Lightbox({
           onPrev();
         }}
         aria-label="Previous Image"
-        className="absolute left-3 md:left-6 z-10 p-3 rounded-full bg-black/50 hover:bg-[#c8a97e]/20 text-white/80 hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all duration-300 backdrop-blur-md"
+        className="absolute left-2 sm:left-6 z-10 p-2 sm:p-3 rounded-full bg-black/60 hover:bg-[#c8a97e]/20 text-white/90 hover:text-[#c8a97e] border border-white/15 hover:border-[#c8a97e]/40 transition-all duration-300 backdrop-blur-md"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       <button
@@ -98,14 +124,14 @@ export default function Lightbox({
           onNext();
         }}
         aria-label="Next Image"
-        className="absolute right-3 md:right-6 z-10 p-3 rounded-full bg-black/50 hover:bg-[#c8a97e]/20 text-white/80 hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all duration-300 backdrop-blur-md"
+        className="absolute right-2 sm:right-6 z-10 p-2 sm:p-3 rounded-full bg-black/60 hover:bg-[#c8a97e]/20 text-white/90 hover:text-[#c8a97e] border border-white/15 hover:border-[#c8a97e]/40 transition-all duration-300 backdrop-blur-md"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Main Image Container */}
       <div
-        className="relative max-w-5xl w-[96vw] sm:w-[92vw] h-[65vh] sm:h-[75vh] flex flex-col items-center justify-center p-1 sm:p-2 mt-12 sm:mt-0"
+        className="relative max-w-5xl w-[95vw] sm:w-[92vw] h-[56dvh] sm:h-[72vh] flex flex-col items-center justify-center p-1 sm:p-2 mt-10 sm:mt-0"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative w-full h-full flex items-center justify-center">
@@ -120,11 +146,11 @@ export default function Lightbox({
         </div>
 
         {/* Bottom Caption Bar */}
-        <div className="mt-4 text-center max-w-2xl px-4">
-          <h3 className="font-serif text-xl md:text-2xl text-[#fcfbf7] tracking-wide">
+        <div className="mt-3 sm:mt-4 text-center max-w-2xl px-3 sm:px-4">
+          <h3 className="font-serif text-lg sm:text-2xl text-[#fcfbf7] tracking-wide">
             {currentItem.title}
           </h3>
-          <div className="flex items-center justify-center space-x-4 mt-1 text-xs text-[#a39e94]">
+          <div className="flex items-center justify-center space-x-3 sm:space-x-4 mt-1 text-[11px] sm:text-xs text-[#a39e94]">
             <span className="flex items-center gap-1">
               <MapPin className="w-3 h-3 text-[#c8a97e]" />
               {currentItem.location}
@@ -135,7 +161,7 @@ export default function Lightbox({
               {currentItem.category}
             </span>
           </div>
-          <p className="text-xs md:text-sm text-[#fcfbf7]/75 font-light mt-1.5 italic">
+          <p className="text-[11px] sm:text-sm text-[#fcfbf7]/75 font-light mt-1 italic line-clamp-2 sm:line-clamp-none">
             "{currentItem.caption}"
           </p>
         </div>

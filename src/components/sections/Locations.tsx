@@ -21,31 +21,31 @@ export default function Locations() {
   ];
 
   return (
-    <section id="locations" className="relative py-24 md:py-32 bg-[#08090d] text-[#fbf9f5] overflow-hidden">
+    <section id="locations" className="relative py-18 md:py-32 bg-[#08090d] text-[#fbf9f5] overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#c5a059]/5 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#edd8a6] font-semibold mb-3">
             <Compass className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>PRIMARY SERVICE REGIONS</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
             CAPTURING STORIES ACROSS MAHARASHTRA
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="text-sm sm:text-base text-[#a39e94] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-base text-[#a39e94] font-light max-w-2xl mx-auto leading-relaxed">
             Based in Maharashtra and available for weddings across Pune, Nashik, Malegaon and destinations throughout India.
           </p>
         </div>
 
         {/* Minimal Stylized Maharashtra Map & Hub Graphic */}
-        <div className="relative mb-16 p-8 sm:p-12 rounded-md bg-[#10121a] border border-[#c5a059]/30 overflow-hidden shadow-2xl">
+        <div className="relative mb-12 sm:mb-16 p-4 sm:p-10 md:p-12 rounded-md bg-[#10121a] border border-[#c5a059]/30 overflow-hidden shadow-2xl">
           {/* Subtle geometric line art connecting Pune, Nashik, Malegaon */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <svg
@@ -69,22 +69,22 @@ export default function Locations() {
             </svg>
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 text-center md:text-left">
             {hubs.map((hub) => (
               <div
                 key={hub.city}
-                className="p-7 rounded-md bg-black/50 border border-white/10 hover:border-[#c5a059] transition-all duration-300 group hover:-translate-y-1 shadow-lg"
+                className="p-5 sm:p-7 rounded-md bg-black/50 border border-white/10 hover:border-[#c5a059] transition-all duration-300 group hover:-translate-y-1 shadow-lg"
               >
                 <div className="flex items-center justify-center md:justify-start gap-2 text-xs uppercase tracking-[0.25em] text-[#edd8a6] mb-2 font-mono font-medium">
                   <MapPin className="w-3.5 h-3.5 text-[#c5a059]" />
                   <span>Primary Hub</span>
                 </div>
 
-                <h3 className="font-serif text-3xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors tracking-wider">
+                <h3 className="font-serif text-2xl sm:text-3xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors tracking-wider">
                   {hub.city}
                 </h3>
 
-                <p className="text-xs uppercase tracking-wider text-[#edd8a6]/80 mt-1 mb-3 font-medium">
+                <p className="text-xs uppercase tracking-wider text-[#edd8a6]/80 mt-1 mb-2 sm:mb-3 font-medium">
                   {hub.tagline}
                 </p>
 
@@ -96,7 +96,7 @@ export default function Locations() {
           </div>
 
           {/* Bottom Destination Callout */}
-          <div className="relative z-10 mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="relative z-10 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center gap-3">
               <Navigation className="w-5 h-5 text-[#c5a059] shrink-0" />
               <p className="text-xs sm:text-sm text-[#fbf9f5]/85 font-light">
@@ -106,7 +106,7 @@ export default function Locations() {
 
             <a
               href="#contact"
-              className="text-xs uppercase tracking-[0.2em] text-[#edd8a6] hover:text-white font-semibold whitespace-nowrap transition-colors"
+              className="w-full sm:w-auto py-2.5 px-4 rounded-sm bg-white/5 sm:bg-transparent border border-[#c5a059]/30 sm:border-0 text-xs uppercase tracking-[0.2em] text-[#edd8a6] hover:text-white font-semibold transition-colors text-center shrink-0"
             >
               Enquire Travel Dates →
             </a>

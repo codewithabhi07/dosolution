@@ -6,35 +6,35 @@ import GoldDivider from "@/components/ui/GoldDivider";
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32 bg-[#0a0b10] text-[#fbf9f5] overflow-hidden">
+    <section id="services" className="relative py-18 md:py-32 bg-[#0a0b10] text-[#fbf9f5] overflow-hidden">
       {/* Subtle royal ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#c5a059]/5 blur-[160px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#edd8a6] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>OUR SPECIALIZATIONS</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
             WHAT WE CREATE
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="text-sm sm:text-base text-[#a39e94] font-light max-w-xl mx-auto">
+          <p className="text-xs sm:text-base text-[#a39e94] font-light max-w-xl mx-auto">
             From intimate rituals to multi-day grand celebrations, we provide bespoke photographic and cinematic services designed to capture real human emotion.
           </p>
         </div>
 
         {/* 6 Luxury Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {SERVICES_DATA.map((service) => (
             <div
               key={service.id}
-              className="group relative rounded-md overflow-hidden bg-[#11131c] border border-[#c5a059]/25 hover:border-[#edd8a6] transition-all duration-500 shadow-2xl flex flex-col justify-between min-h-[460px] hover:-translate-y-1.5"
+              className="group relative rounded-md overflow-hidden bg-[#11131c] border border-[#c5a059]/25 hover:border-[#edd8a6] transition-all duration-500 shadow-2xl flex flex-col justify-between min-h-[400px] sm:min-h-[460px] hover:-translate-y-1.5"
             >
               {/* Background Image with Hover Zoom */}
               <div className="absolute inset-0 z-0 overflow-hidden">
@@ -49,17 +49,17 @@ export default function Services() {
               </div>
 
               {/* Card Header Content */}
-              <div className="relative z-10 p-6 sm:p-8 flex items-start justify-between">
-                <span className="font-serif text-3xl font-light text-[#c5a059] group-hover:text-[#edd8a6] transition-colors">
+              <div className="relative z-10 p-5 sm:p-8 flex items-start justify-between">
+                <span className="font-serif text-2xl sm:text-3xl font-light text-[#c5a059] group-hover:text-[#edd8a6] transition-colors">
                   {service.number}
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] border border-[#c5a059]/40 bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">
+                <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] border border-[#c5a059]/40 bg-black/50 px-2.5 sm:px-3 py-1 rounded-full backdrop-blur-md">
                   {service.tag}
                 </span>
               </div>
 
               {/* Card Bottom Content */}
-              <div className="relative z-10 p-6 sm:p-8 space-y-4">
+              <div className="relative z-10 p-5 sm:p-8 space-y-3.5 sm:space-y-4">
                 <h3 className="font-serif text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors tracking-wide">
                   {service.title}
                 </h3>

@@ -34,25 +34,25 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="relative py-24 md:py-32 bg-[#f5efe6] text-[#141418] overflow-hidden">
+    <section id="experience" className="relative py-18 md:py-32 bg-[#f5efe6] text-[#141418] overflow-hidden">
       {/* Subtle ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#edd8a6]/25 blur-[140px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#8f6f2d] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>OUR SIGNATURE JOURNEY</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#141418] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#141418] font-normal tracking-tight">
             THE DO SOLUTION EXPERIENCE
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="text-sm sm:text-base text-[#5a564f] font-light max-w-xl mx-auto">
+          <p className="text-xs sm:text-base text-[#5a564f] font-light max-w-xl mx-auto">
             From your very first enquiry to the day you watch your wedding film on the big screen, we guide you through an effortless, personalized process.
           </p>
         </div>
@@ -65,13 +65,13 @@ export default function Experience() {
           {/* Mobile Vertical Line */}
           <div className="lg:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-[2px] bg-gradient-to-b from-[#c5a059]/60 via-[#c5a059]/30 to-transparent z-0 pointer-events-none" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6 relative z-10">
             {steps.map((step) => {
               const IconComponent = step.icon;
               return (
                 <div
                   key={step.number}
-                  className="group relative flex flex-col items-center lg:items-start text-center lg:text-left bg-white/85 p-7 sm:p-8 rounded-md border border-[#c5a059]/30 hover:border-[#c5a059] transition-all duration-300 shadow-xl shadow-[#141418]/05 hover:-translate-y-1"
+                  className="group relative flex flex-col items-center lg:items-start text-center lg:text-left bg-white/90 p-6 sm:p-8 rounded-md border border-[#c5a059]/30 hover:border-[#c5a059] transition-all duration-300 shadow-xl shadow-[#141418]/05 hover:-translate-y-1"
                 >
                   {/* Step Badge / Icon */}
                   <div className="relative mb-6">

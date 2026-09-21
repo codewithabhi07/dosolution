@@ -57,36 +57,36 @@ export default function VideoModal({
       role="dialog"
       aria-modal="true"
       aria-label="Cinematic Film Player"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 sm:p-6 animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-2xl p-3 sm:p-6 animate-fadeIn"
       onClick={onClose}
     >
       <div
         className={`relative w-full ${
-          isReel ? "max-w-sm sm:max-w-md" : "max-w-4xl"
-        } bg-[#0e1017] border border-[#c5a059]/40 rounded-lg overflow-hidden shadow-2xl shadow-black/90`}
+          isReel ? "max-w-xs sm:max-w-md" : "max-w-4xl"
+        } bg-[#0e1017] border border-[#c5a059]/40 rounded-lg overflow-hidden shadow-2xl shadow-black/90 max-h-[92dvh] flex flex-col`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-[#12141e]">
-          <div className="flex items-center space-x-3 min-w-0">
+        <div className="flex items-center justify-between px-3.5 sm:px-5 py-3 border-b border-white/10 bg-[#12141e] shrink-0">
+          <div className="flex items-center space-x-2.5 sm:space-x-3 min-w-0">
             <div className="p-1.5 rounded-full bg-[#c5a059]/15 text-[#edd8a6] shrink-0">
               {isInstagram ? <InstagramIcon className="w-4 h-4" /> : <Film className="w-4 h-4" />}
             </div>
             <div className="truncate">
-              <h3 className="font-serif text-base sm:text-lg text-[#fbf9f5] tracking-wide truncate">
+              <h3 className="font-serif text-sm sm:text-lg text-[#fbf9f5] tracking-wide truncate">
                 {title}
               </h3>
-              {couple && <p className="text-[11px] text-[#a39e94] truncate">{couple}</p>}
+              {couple && <p className="text-[10px] sm:text-[11px] text-[#a39e94] truncate">{couple}</p>}
             </div>
           </div>
 
-          <div className="flex items-center space-x-2 shrink-0 ml-3">
+          <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0 ml-2">
             {isInstagram && (
               <a
                 href={videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-full bg-white/5 hover:bg-[#c5a059]/20 text-[#edd8a6] transition-colors"
+                className="w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white/5 hover:bg-[#c5a059]/20 text-[#edd8a6] transition-colors flex items-center justify-center"
                 title="Open in Instagram"
               >
                 <ExternalLink className="w-4 h-4" />
@@ -95,7 +95,7 @@ export default function VideoModal({
             <button
               onClick={onClose}
               aria-label="Close video player"
-              className="p-1.5 rounded-full bg-white/5 hover:bg-white/15 text-[#fbf9f5] hover:text-[#edd8a6] transition-colors cursor-pointer"
+              className="w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white/5 hover:bg-white/15 text-[#fbf9f5] hover:text-[#edd8a6] transition-colors cursor-pointer flex items-center justify-center"
             >
               <X className="w-5 h-5" />
             </button>
@@ -105,7 +105,7 @@ export default function VideoModal({
         {/* Video Player Container */}
         <div
           className={`relative w-full bg-black ${
-            isReel ? "aspect-[9/16] max-h-[75vh]" : "aspect-video"
+            isReel ? "aspect-[9/16] max-h-[62dvh] sm:max-h-[72vh]" : "aspect-video"
           }`}
         >
           <iframe
@@ -118,9 +118,9 @@ export default function VideoModal({
         </div>
 
         {/* Footer Note */}
-        <div className="px-5 py-2.5 bg-[#090a0f] border-t border-white/10 flex items-center justify-between text-[11px] text-[#a39e94]">
-          <span>DO Solution Cinematic Showcase</span>
-          <span className="text-[#c5a059] font-mono">
+        <div className="px-3.5 sm:px-5 py-2 sm:py-2.5 bg-[#090a0f] border-t border-white/10 flex items-center justify-between text-[10px] sm:text-[11px] text-[#a39e94] shrink-0">
+          <span className="truncate">DO Solution Cinematic Showcase</span>
+          <span className="text-[#c5a059] font-mono shrink-0 ml-2">
             {isReel ? "Instagram Reel / 9:16" : "4K Ultra-HD Master Film"}
           </span>
         </div>

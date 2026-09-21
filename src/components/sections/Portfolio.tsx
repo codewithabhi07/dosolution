@@ -54,12 +54,12 @@ export default function Portfolio() {
         </div>
 
         {/* Filter Tabs with Liquid Gold Active State */}
-        <div className="flex items-center justify-start md:justify-center overflow-x-auto pb-4 mb-12 gap-2 sm:gap-3 no-scrollbar">
+        <div className="flex items-center justify-start md:justify-center overflow-x-auto pb-4 mb-8 sm:mb-12 gap-2 sm:gap-3 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
           {PORTFOLIO_CATEGORIES.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
+              className={`px-4 sm:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] sm:tracking-[0.2em] rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer min-h-[40px] flex items-center shrink-0 ${
                 activeCategory === category
                   ? "bg-gold-gradient text-[#08090d] font-bold shadow-lg shadow-[#c5a059]/25 scale-105"
                   : "bg-white/5 text-[#a39e94] hover:text-[#fbf9f5] hover:bg-white/10 border border-white/10"
@@ -71,7 +71,7 @@ export default function Portfolio() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
@@ -97,24 +97,24 @@ export default function Portfolio() {
                 />
 
                 {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 sm:opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
 
                 {/* Lightbox Expand Icon */}
-                <div className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-[#c5a059]/40 flex items-center justify-center text-white/90 group-hover:text-[#edd8a6] group-hover:border-[#edd8a6] opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 shadow-lg">
-                  <Maximize2 className="w-4 h-4" />
+                <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-md border border-[#c5a059]/40 flex items-center justify-center text-white/90 group-hover:text-[#edd8a6] group-hover:border-[#edd8a6] opacity-90 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 shadow-lg">
+                  <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
 
                 {/* Bottom Overlay Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-10 space-y-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] font-mono">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 z-10 space-y-1 sm:space-y-1.5 transform translate-y-0 sm:translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] font-mono block">
                     {item.category}
                   </span>
 
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors">
+                  <h3 className="font-serif text-lg sm:text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors leading-tight">
                     {item.title}
                   </h3>
 
-                  <div className="flex items-center space-x-1.5 text-xs text-[#a39e94]">
+                  <div className="flex items-center space-x-1.5 text-[11px] sm:text-xs text-[#a39e94]">
                     <MapPin className="w-3 h-3 text-[#c5a059]" />
                     <span>{item.location}</span>
                   </div>

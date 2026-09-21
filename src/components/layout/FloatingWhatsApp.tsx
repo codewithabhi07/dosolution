@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
   const whatsappUrl = getWhatsAppLink();
 
   return (
-    <div className="fixed bottom-20 md:bottom-8 right-5 sm:right-7 z-40">
+    <div className="hidden md:block fixed bottom-8 right-7 z-40">
       <a
         href={whatsappUrl}
         target="_blank"

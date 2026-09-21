@@ -36,34 +36,34 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-us" className="relative py-24 md:py-32 bg-[#faf8f5] text-[#141418]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <section id="why-us" className="relative py-18 md:py-32 bg-[#faf8f5] text-[#141418]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#8f6f2d] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
             <span>THE DO SOLUTION PROMISE</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#141418] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#141418] font-normal tracking-tight">
             WHY COUPLES CHOOSE DO SOLUTION
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="text-sm sm:text-base text-[#5a564f] font-light max-w-xl mx-auto">
+          <p className="text-xs sm:text-base text-[#5a564f] font-light max-w-xl mx-auto">
             Our couples trust us to turn their most significant day into timeless heirloom art that transcends passing trends.
           </p>
         </div>
 
         {/* 6 Feature Blocks Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {reasons.map((reason, index) => {
             const IconComponent = reason.icon;
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-md bg-white border border-[#c5a059]/30 hover:border-[#c5a059] transition-all duration-300 hover:-translate-y-1.5 shadow-xl shadow-[#141418]/05 flex flex-col justify-between"
+                className="group relative p-6 sm:p-8 rounded-md bg-white border border-[#c5a059]/30 hover:border-[#c5a059] transition-all duration-300 hover:-translate-y-1.5 shadow-xl shadow-[#141418]/05 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-full bg-[#faf8f5] border-2 border-[#c5a059] flex items-center justify-center text-[#8f6f2d] group-hover:scale-110 group-hover:bg-[#c5a059] group-hover:text-black transition-all duration-300 mb-6 shadow-md">

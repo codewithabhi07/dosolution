@@ -117,38 +117,38 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-[#0a0b10] text-[#fbf9f5]">
+    <section id="contact" className="relative py-18 md:py-32 bg-[#0a0b10] text-[#fbf9f5]">
       {/* Subtle background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#42101e]/15 blur-[160px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.35em] text-[#edd8a6] font-mono block mb-2 font-medium">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#edd8a6] font-mono block mb-2 font-medium">
             DATE AVAILABILITY & ENQUIRIES
           </span>
 
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-[#fbf9f5] font-normal tracking-tight">
+          <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl text-[#fbf9f5] font-normal tracking-tight">
             LET'S CREATE SOMETHING BEAUTIFUL.
           </h2>
 
           <GoldDivider withDiamond />
 
-          <p className="font-serif italic text-lg sm:text-xl text-[#edd8a6] max-w-xl mx-auto">
+          <p className="font-serif italic text-base sm:text-xl text-[#edd8a6] max-w-xl mx-auto">
             "Your date could be the beginning of our next story."
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           {/* Left Column: Direct Contact & Proprietary Info */}
-          <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
-            <div className="space-y-6">
-              <div className="p-8 rounded-md bg-[#11131c] border border-[#c5a059]/35 space-y-4 shadow-2xl">
+          <div className="lg:col-span-5 space-y-6 flex flex-col justify-between">
+            <div className="space-y-5">
+              <div className="p-5 sm:p-8 rounded-md bg-[#11131c] border border-[#c5a059]/35 space-y-4 shadow-2xl">
                 <div>
                   <span className="text-xs uppercase tracking-widest text-[#a39e94] block">
                     Proprietor & Director
                   </span>
-                  <h3 className="font-serif text-3xl text-[#fcfbf7] mt-1">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#fcfbf7] mt-1">
                     {SITE_CONFIG.proprietor}
                   </h3>
                   <p className="text-xs text-[#c8a97e] uppercase tracking-widest">
@@ -159,7 +159,7 @@ export default function ContactSection() {
                 <div className="pt-4 border-t border-white/10 space-y-3">
                   <a
                     href={getTelLink()}
-                    className="flex items-center gap-3 text-base text-[#fcfbf7] hover:text-[#c8a97e] transition-colors"
+                    className="flex items-center gap-3 text-sm sm:text-base text-[#fcfbf7] hover:text-[#c8a97e] transition-colors"
                   >
                     <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#c8a97e]">
                       <Phone className="w-4 h-4" />
@@ -169,15 +169,15 @@ export default function ContactSection() {
 
                   <a
                     href={`mailto:${SITE_CONFIG.email}`}
-                    className="flex items-center gap-3 text-sm text-[#a39e94] hover:text-[#c8a97e] transition-colors"
+                    className="flex items-center gap-3 text-xs sm:text-sm text-[#a39e94] hover:text-[#c8a97e] transition-colors"
                   >
                     <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#c8a97e]">
                       <Mail className="w-4 h-4" />
                     </div>
-                    <span>{SITE_CONFIG.email}</span>
+                    <span className="truncate">{SITE_CONFIG.email}</span>
                   </a>
 
-                  <div className="flex items-start gap-3 text-sm text-[#a39e94] pt-1">
+                  <div className="flex items-start gap-3 text-xs sm:text-sm text-[#a39e94] pt-1">
                     <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#c8a97e] shrink-0">
                       <MapPin className="w-4 h-4" />
                     </div>
@@ -194,9 +194,9 @@ export default function ContactSection() {
               </div>
 
               {/* Direct WhatsApp Callout */}
-              <div className="p-6 rounded-sm bg-gradient-to-br from-[#121b14] to-[#0a120c] border border-[#25D366]/30 flex items-center justify-between gap-4">
+              <div className="p-4 sm:p-6 rounded-sm bg-gradient-to-br from-[#121b14] to-[#0a120c] border border-[#25D366]/30 flex flex-col min-[420px]:flex-row items-start min-[420px]:items-center justify-between gap-3.5">
                 <div>
-                  <h4 className="font-serif text-lg text-white">Prefer instant chat?</h4>
+                  <h4 className="font-serif text-base sm:text-lg text-white">Prefer instant chat?</h4>
                   <p className="text-xs text-white/70 mt-0.5">
                     Connect directly with Pranav Desai on WhatsApp.
                   </p>
@@ -205,7 +205,7 @@ export default function ContactSection() {
                   href={getWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2.5 rounded-sm bg-[#25D366] text-black font-semibold text-xs uppercase tracking-wider flex items-center gap-2 shrink-0 hover:bg-[#20bd5a] transition-colors shadow-lg"
+                  className="w-full min-[420px]:w-auto px-4 py-2.5 rounded-sm bg-[#25D366] text-black font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shrink-0 hover:bg-[#20bd5a] transition-colors shadow-lg"
                 >
                   <MessageCircle className="w-4 h-4 fill-black" />
                   <span>Chat Now</span>
@@ -214,7 +214,7 @@ export default function ContactSection() {
             </div>
 
             {/* Reassurance note */}
-            <div className="p-6 rounded-sm bg-black/40 border border-white/5 text-xs text-[#a39e94] leading-relaxed font-light">
+            <div className="p-4 sm:p-6 rounded-sm bg-black/40 border border-white/5 text-xs text-[#a39e94] leading-relaxed font-light">
               <span className="text-[#c8a97e] font-medium block mb-1">Limited Annual Bookings</span>
               To give each couple our undivided creative focus, master color grading, and personal direction, DO Solution accepts a strictly limited number of weddings each season.
             </div>
@@ -222,7 +222,7 @@ export default function ContactSection() {
 
           {/* Right Column: High-Conversion Booking Form */}
           <div className="lg:col-span-7">
-            <div className="p-5 sm:p-8 md:p-10 rounded-md bg-[#11131c] border border-[#c5a059]/35 shadow-2xl relative">
+            <div className="p-4 sm:p-8 md:p-10 rounded-md bg-[#11131c] border border-[#c5a059]/35 shadow-2xl relative">
               {isSubmitted ? (
                 <div className="py-12 text-center space-y-5 animate-fadeIn">
                   <div className="w-16 h-16 rounded-full bg-[#c8a97e]/10 border border-[#c8a97e] flex items-center justify-center text-[#c8a97e] mx-auto">
@@ -413,7 +413,7 @@ export default function ContactSection() {
                             type="button"
                             key={service}
                             onClick={() => handleServiceToggle(service)}
-                            className={`px-3.5 py-2.5 rounded-sm border text-xs text-left flex items-center justify-between transition-all duration-200 cursor-pointer ${
+                            className={`px-3.5 py-2.5 rounded-sm border text-xs text-left flex items-center justify-between transition-all duration-200 cursor-pointer min-h-[44px] ${
                               checked
                                 ? "bg-[#c8a97e]/15 border-[#c8a97e] text-[#fcfbf7]"
                                 : "bg-black/30 border-white/10 text-[#a39e94] hover:border-white/20"
@@ -421,7 +421,7 @@ export default function ContactSection() {
                           >
                             <span>{service}</span>
                             <span
-                              className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center text-[9px] ${
+                              className={`w-4 h-4 rounded-full border flex items-center justify-center text-[10px] shrink-0 ml-2 ${
                                 checked
                                   ? "bg-[#c8a97e] border-[#c8a97e] text-black font-bold"
                                   : "border-white/20"
@@ -445,16 +445,16 @@ export default function ContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your ceremonies, vision, and expectations..."
-                      className="w-full px-4 py-3 bg-[#08080a] border border-white/10 rounded-sm text-sm text-[#fcfbf7] placeholder-[#706b63] focus:outline-none focus:border-[#c8a97e] transition-colors"
+                      className="w-full px-4 py-3 bg-[#08080a] border border-white/10 rounded-sm text-sm sm:text-base text-[#fcfbf7] placeholder-[#706b63] focus:outline-none focus:border-[#c8a97e] transition-colors"
                     />
                   </div>
 
                   {/* Submit Button & Fast WhatsApp Option */}
-                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:flex-1 py-4 bg-gold-gradient hover:bg-gold-gradient-hover text-[#08090d] text-xs uppercase tracking-[0.25em] font-bold rounded-sm transition-all duration-300 shadow-xl shadow-[#c5a059]/25 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 hover:scale-[1.01]"
+                      className="w-full sm:flex-1 py-3.5 sm:py-4 bg-gold-gradient hover:bg-gold-gradient-hover text-[#08090d] text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-bold rounded-sm transition-all duration-300 shadow-xl shadow-[#c5a059]/25 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 hover:scale-[1.01] min-h-[48px]"
                     >
                       {isSubmitting ? (
                         <span>Checking Date Availability...</span>
@@ -469,7 +469,7 @@ export default function ContactSection() {
                     <button
                       type="button"
                       onClick={handleSendViaWhatsApp}
-                      className="w-full sm:w-auto px-5 py-4 border border-[#25D366]/60 hover:bg-[#25D366]/15 text-[#25D366] text-xs uppercase tracking-[0.15em] font-medium rounded-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full sm:w-auto px-5 py-3.5 sm:py-4 border border-[#25D366]/60 hover:bg-[#25D366]/15 text-[#25D366] text-xs uppercase tracking-[0.15em] font-medium rounded-sm transition-colors flex items-center justify-center gap-2 cursor-pointer min-h-[48px]"
                       title="Directly send this form to Pranav Desai on WhatsApp"
                     >
                       <MessageCircle className="w-4 h-4 fill-current" />
