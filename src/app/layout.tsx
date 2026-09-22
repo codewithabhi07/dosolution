@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.brandName,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85",
+        url: "/images/hero-cinematic-couple.jpg",
         width: 1200,
         height: 630,
         alt: "DO Solution Luxury Wedding Photography & Cinematography",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_CONFIG.seo.title,
     description: SITE_CONFIG.seo.description,
-    images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85"],
+    images: ["/images/hero-cinematic-couple.jpg"],
   },
   robots: {
     index: true,

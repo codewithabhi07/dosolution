@@ -21,7 +21,7 @@ export default function Intro() {
               {/* Main portrait photo */}
               <div className="relative aspect-[3/4] w-full rounded-md overflow-hidden border border-[#c5a059]/40 shadow-2xl shadow-[#141418]/10 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85"
+                  src="/images/intro-royal-9x16.jpg"
                   alt="DO Solution Royal Wedding Story"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -42,11 +42,11 @@ export default function Intro() {
               {/* Overlapping secondary detail accent card */}
               <div className="hidden sm:block absolute -bottom-6 -right-6 w-44 aspect-square rounded-md overflow-hidden border-2 border-white shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"
-                  alt="Ritual and jewelry detail"
+                  src="/images/intro-accent-balcony-square.jpg"
+                  alt="Traditional Maharashtrian Wedding Rituals"
                   fill
                   sizes="180px"
-                  className="object-cover"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 

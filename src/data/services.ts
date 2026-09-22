@@ -14,8 +14,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Editorial bride & groom fine-art sessions",
       "High-resolution color-graded master gallery",
     ],
-    // Indian Bride portrait / traditional garland ceremony
-    imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
+    // Traditional Maharashtrian Wedding Couple
+    imageUrl: "/images/hero-maharashtrian-couple.jpg",
   },
   {
     id: "wedding-cinematography",
@@ -30,8 +30,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Smooth gimbal & aerial drone perspectives",
       "Artisanal color grading & custom soundtrack",
     ],
-    // Cinematic Indian couple night / celebratory bokeh
-    imageUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80",
+    // Cinematic Indian couple / royal night
+    imageUrl: "/images/hero-cinematic-couple.jpg",
   },
   {
     id: "pre-wedding-photography",
@@ -46,8 +46,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Sunset golden hour & dusk portraits",
       "Teaser poster for digital invitations",
     ],
-    // Romantic couple outdoor portrait
-    imageUrl: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80",
+    // Heritage royal pre-wedding shoot
+    imageUrl: "/images/service-prewedding-royal.jpg",
   },
   {
     id: "engagement-photography",
@@ -62,8 +62,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Couple mini-portrait session",
       "Fast turnaround previews for social sharing",
     ],
-    // Indian couple hands / mehendi / ring moment
-    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+    // Authentic engagement / Paithani couple
+    imageUrl: "/images/story-aditya-mugdha.jpg",
   },
   {
     id: "wedding-highlight-films",
@@ -78,8 +78,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Soundbites of family blessings & laughter",
       "Signature DO Solution cinematic look",
     ],
-    // Dynamic festive celebration / flower petal shower
-    imageUrl: "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=1200&q=80",
+    // Grand celebratory wedding film
+    imageUrl: "/images/service-marwadi-wedding.jpg",
   },
   {
     id: "complete-wedding-coverage",
@@ -94,7 +94,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Premium heirloom leather photo album",
       "Same-day teaser clip options available",
     ],
-    // Rich Indian wedding ceremony mandap
-    imageUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80",
+    // Grand royal Indian wedding mandap ceremony
+    imageUrl: "/images/service-mandap-grand.jpg",
   },
 ];

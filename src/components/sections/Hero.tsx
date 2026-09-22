@@ -18,12 +18,12 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
       {/* Cinematic Background Image with slow subtle zoom */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2000&q=90"
+          src="/images/hero-cinematic-couple.jpg"
           alt="DO Solution Indian Wedding Photography & Cinematography"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center animate-subtle-zoom brightness-[0.72] contrast-[1.05]"
+          className="object-cover object-center animate-subtle-zoom brightness-[0.58] contrast-[1.08]"
         />
         {/* Subtle multi-layer cinematic gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-black/45 to-black/70" />
