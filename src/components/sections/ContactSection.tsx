@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Calendar, Send, CheckCircle2, MessageCircle, Alert
 import confetti from "canvas-confetti";
 import { SITE_CONFIG, getTelLink, getWhatsAppLink } from "@/data/site";
 import GoldDivider from "@/components/ui/GoldDivider";
+import { InstagramIcon, YouTubeIcon, FacebookIcon, GlobeIcon } from "@/components/ui/BrandIcons";
 
 interface FormData {
   name: string;
@@ -188,6 +189,55 @@ export default function ContactSection() {
                       <p className="text-xs mt-0.5 text-[#c8a97e]">
                         Pune • Nashik • Malegaon • All India
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Official Channels Row */}
+                  <div className="pt-3 border-t border-white/10">
+                    <p className="text-[10.5px] uppercase tracking-widest text-[#a39e94] mb-2 font-mono">
+                      Explore Official Work & Films:
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={SITE_CONFIG.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        title="Facebook: www.facebook.com/dosolution"
+                        className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#1877F2]/20 text-[#fcfbf7] hover:text-[#1877F2] border border-white/10 transition-colors flex items-center justify-center"
+                      >
+                        <FacebookIcon className="w-3.5 h-3.5" />
+                      </a>
+                      <a
+                        href={SITE_CONFIG.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        title="Instagram: @dosolution"
+                        className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 transition-colors flex items-center justify-center"
+                      >
+                        <InstagramIcon className="w-3.5 h-3.5" />
+                      </a>
+                      <a
+                        href={SITE_CONFIG.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                        title="YouTube: DO Movies"
+                        className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#ff0000]/20 text-[#fcfbf7] hover:text-[#ff0000] border border-white/10 transition-colors flex items-center justify-center"
+                      >
+                        <YouTubeIcon className="w-3.5 h-3.5" />
+                      </a>
+                      <a
+                        href={SITE_CONFIG.legacyWebsite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Website"
+                        title="Website: www.dosolution.webs.com"
+                        className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 transition-colors flex items-center justify-center"
+                      >
+                        <GlobeIcon className="w-3.5 h-3.5" />
+                      </a>
                     </div>
                   </div>
                 </div>

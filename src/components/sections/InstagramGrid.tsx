@@ -86,23 +86,36 @@ export default function InstagramGrid() {
                   <Heart className="w-3 h-3 fill-red-500 text-red-500" />
                   <span>{post.likes}</span>
                 </div>
-                <span className="text-[9px] text-[#edd8a6] mt-2 underline uppercase tracking-wider">
-                  {post.type === "Reel" ? "Play Reel ▶" : "View Story →"}
-                </span>
+                <div className="mt-2.5 flex items-center gap-2">
+                  <span className="text-[9.5px] text-[#edd8a6] uppercase tracking-wider font-semibold">
+                    {post.type === "Reel" ? "Play Reel ▶" : "Preview →"}
+                  </span>
+                  <a
+                    href={post.postUrl || SITE_CONFIG.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-1 rounded-full bg-white/10 hover:bg-[#c5a059] text-white hover:text-black transition-colors"
+                    title="Open on @dosolution Instagram"
+                  >
+                    <InstagramIcon className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Follow CTA */}
-        <div className="mt-10 sm:mt-12 text-center">
+        <div className="mt-10 sm:mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={SITE_CONFIG.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold-gradient hover:bg-gold-gradient-hover text-[#08090d] text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-bold rounded-sm shadow-xl shadow-[#c5a059]/20 transition-all duration-300 hover:scale-105 min-h-[48px]"
           >
-            <span>FOLLOW ON INSTAGRAM</span>
+            <InstagramIcon className="w-4 h-4 text-black" />
+            <span>FOLLOW @DOSOLUTION ON INSTAGRAM</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -112,8 +125,8 @@ export default function InstagramGrid() {
       <VideoModal
         isOpen={Boolean(activeReel)}
         videoUrl={activeReel?.url || ""}
-        title={activeReel?.title || "Instagram Wedding Reel"}
-        couple="DO Solution • Pune • Nashik • Malegaon"
+        title={activeReel?.title || "DO Solution Wedding Reel"}
+        couple="DO Solution • Pune | Nashik | Malegaon"
         onClose={() => setActiveReel(null)}
       />
     </section>

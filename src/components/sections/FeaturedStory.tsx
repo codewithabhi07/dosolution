@@ -97,7 +97,7 @@ export default function FeaturedStory() {
         isOpen={isVideoModalOpen}
         videoUrl={FEATURED_STORY.videoUrl}
         title={FEATURED_STORY.title}
-        couple="Aditi & Rohan"
+        couple="Anuja & Ashish • Pune"
         onClose={() => setIsVideoModalOpen(false)}
       />
     </section>

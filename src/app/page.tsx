@@ -82,8 +82,8 @@ export default function Home() {
       <VideoModal
         isOpen={isHeroVideoModalOpen}
         videoUrl={FEATURED_STORY.videoUrl}
-        title="DO Solution — Signature Wedding Showreel"
-        couple="Pune • Nashik • Malegaon"
+        title="DO Solution & DO Movies — Anuja & Ashish Wedding Highlight"
+        couple="Pune, Maharashtra"
         onClose={() => setIsHeroVideoModalOpen(false)}
       />
     </div>

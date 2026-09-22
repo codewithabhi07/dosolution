@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Globe } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppLink, getTelLink } from "@/data/site";
 import GoldDivider from "@/components/ui/GoldDivider";
-import { InstagramIcon, YouTubeIcon, WhatsAppIcon } from "@/components/ui/BrandIcons";
+import { InstagramIcon, YouTubeIcon, WhatsAppIcon, FacebookIcon } from "@/components/ui/BrandIcons";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,17 +21,28 @@ export default function Footer() {
                 {SITE_CONFIG.brandName}
               </span>
             </Link>
-            <p className="text-xs uppercase tracking-[0.25em] text-[#c8a97e]">
+            <p className="text-xs uppercase tracking-[0.22em] text-[#c8a97e]">
               {SITE_CONFIG.brandSubtitle}
             </p>
             <p className="text-sm text-[#a39e94] leading-relaxed pr-4 font-light">
-              Transforming heartfelt laughter, sacred rituals, and quiet intimate moments into timeless photographs and cinematic wedding films.
+              "{SITE_CONFIG.tagline}" — Dedicated to capturing emotions, traditions, and timeless cinematic wedding stories.
             </p>
             <div className="pt-2">
               <span className="text-xs text-[#a39e94] block">Proprietor & Director:</span>
               <span className="font-serif text-base text-[#fcfbf7] font-medium tracking-wide">
                 {SITE_CONFIG.proprietor}
               </span>
+              <div className="pt-2">
+                <a
+                  href={SITE_CONFIG.legacyWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] text-[#edd8a6]/80 hover:text-white transition-colors flex items-center gap-1.5 font-mono"
+                >
+                  <Globe className="w-3.5 h-3.5 text-[#c8a97e]" />
+                  <span>{SITE_CONFIG.legacyWebsite.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -103,13 +114,24 @@ export default function Footer() {
 
               <div className="pt-4">
                 <p className="text-xs text-[#a39e94] mb-3 uppercase tracking-wider">Social Stories</p>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2.5">
+                  <a
+                    href={SITE_CONFIG.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    title="Facebook: www.facebook.com/dosolution"
+                    className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#1877F2]/20 text-[#fcfbf7] hover:text-[#1877F2] border border-white/10 hover:border-[#1877F2]/40 transition-all flex items-center justify-center"
+                  >
+                    <FacebookIcon className="w-4 h-4" />
+                  </a>
                   <a
                     href={SITE_CONFIG.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all flex items-center justify-center"
+                    title="Instagram: @dosolution"
+                    className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all flex items-center justify-center"
                   >
                     <InstagramIcon className="w-4 h-4" />
                   </a>
@@ -118,7 +140,8 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#c8a97e]/20 text-[#fcfbf7] hover:text-[#c8a97e] border border-white/10 hover:border-[#c8a97e]/40 transition-all flex items-center justify-center"
+                    title="YouTube: DO Movies (@DOMovies)"
+                    className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#ff0000]/20 text-[#fcfbf7] hover:text-[#ff0000] border border-white/10 hover:border-[#ff0000]/40 transition-all flex items-center justify-center"
                   >
                     <YouTubeIcon className="w-4 h-4" />
                   </a>
@@ -127,7 +150,8 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="WhatsApp"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#25D366]/20 text-[#fcfbf7] hover:text-[#25D366] border border-white/10 hover:border-[#25D366]/40 transition-all flex items-center justify-center"
+                    title="WhatsApp: +91 95031 09320"
+                    className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#25D366]/20 text-[#fcfbf7] hover:text-[#25D366] border border-white/10 hover:border-[#25D366]/40 transition-all flex items-center justify-center"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                   </a>
@@ -146,7 +170,7 @@ export default function Footer() {
           </p>
 
           <p className="font-serif italic text-sm text-[#c8a97e] tracking-wide text-center">
-            "Designed to tell stories. Created to last forever."
+            "{SITE_CONFIG.tagline}"
           </p>
 
           <p className="text-center md:text-right text-[11px] text-[#706b63]">

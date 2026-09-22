@@ -142,7 +142,12 @@ const jsonLd = {
       },
     ],
   },
-  sameAs: [SITE_CONFIG.instagram, SITE_CONFIG.youtube],
+  sameAs: [
+    SITE_CONFIG.instagram,
+    SITE_CONFIG.youtube,
+    SITE_CONFIG.facebook,
+    SITE_CONFIG.legacyWebsite,
+  ],
 };
 
 export default function RootLayout({

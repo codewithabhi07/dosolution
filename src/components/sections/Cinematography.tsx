@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Play, Sparkles, Clock } from "lucide-react";
+import { Play, Sparkles, Clock, ExternalLink } from "lucide-react";
 import { CINEMATOGRAPHY_FILMS } from "@/data/cinematography";
 import { FilmItem } from "@/types";
+import { SITE_CONFIG } from "@/data/site";
 import GoldDivider from "@/components/ui/GoldDivider";
 import VideoModal from "@/components/ui/VideoModal";
+import { YouTubeIcon } from "@/components/ui/BrandIcons";
 
 export default function Cinematography() {
   const [selectedFilm, setSelectedFilm] = useState<FilmItem | null>(null);
@@ -15,8 +17,8 @@ export default function Cinematography() {
     "Cinematic Wedding Films",
     "Wedding Teasers",
     "Highlight Films",
-    "Reels & Vertical Stories",
-    "Ceremony Films",
+    "Pre-Wedding Films",
+    "Maharashtrian Rituals",
   ];
 
   return (
@@ -26,7 +28,7 @@ export default function Cinematography() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#edd8a6] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
-            <span>MOTION PICTURES</span>
+            <span>DO MOVIES • CINEMATIC FILMS</span>
           </div>
 
           <h2 className="font-serif text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl text-[#fbf9f5] font-normal tracking-tight">
@@ -36,12 +38,26 @@ export default function Cinematography() {
           <GoldDivider withDiamond />
 
           <p className="font-serif italic text-base sm:text-xl text-[#edd8a6] max-w-xl mx-auto">
-            "Because some moments deserve more than a photograph."
+            "{SITE_CONFIG.tagline}"
           </p>
 
           <p className="text-xs sm:text-sm text-[#a39e94] font-light max-w-xl mx-auto mt-2.5 sm:mt-3">
-            Sound design, genuine laughs, whispered vows, and sweeping cinematography that brings the spirit of your day alive for generations.
+            Real films from our official channel <strong className="text-[#edd8a6]">DO Movies</strong>. Directed by Pranav Desai across Pune, Nashik, Malegaon & destination venues.
           </p>
+
+          {/* YouTube Channel Button */}
+          <div className="mt-5">
+            <a
+              href={SITE_CONFIG.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/15 hover:bg-red-600/25 text-red-400 border border-red-500/30 text-xs font-mono tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              <YouTubeIcon className="w-4 h-4 text-red-500" />
+              <span>Subscribe to DO Movies ({SITE_CONFIG.youtubeHandle})</span>
+              <ExternalLink className="w-3 h-3 text-red-400" />
+            </a>
+          </div>
 
           {/* Film Types Badge List */}
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
@@ -115,6 +131,20 @@ export default function Cinematography() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Explore All Films on DO Movies CTA */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <a
+            href={SITE_CONFIG.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#ff0000]/15 hover:bg-[#ff0000]/25 text-white border border-[#ff0000]/40 rounded-sm font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 shadow-xl shadow-red-950/30 min-h-[48px]"
+          >
+            <YouTubeIcon className="w-5 h-5 text-red-500" />
+            <span>VIEW COMPLETE FILMOGRAPHY ON YOUTUBE</span>
+            <ExternalLink className="w-4 h-4 text-[#edd8a6]" />
+          </a>
         </div>
       </div>
 

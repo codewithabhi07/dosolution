@@ -44,13 +44,13 @@ export default function Hero({ onWatchFilmClick }: HeroProps) {
 
         {/* Main Heading */}
         <h1 className="font-serif text-2xl min-[360px]:text-3xl min-[410px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#fcfbf7] leading-[1.2] sm:leading-[1.12] tracking-tight max-w-4xl mx-auto drop-shadow-lg px-2">
-          "We Capture the Moments You'll Relive Forever."
+          "Capturing Emotions. Creating Memories. Telling Your Story."
         </h1>
 
         {/* Supporting Text */}
         <div className="mt-4 sm:mt-6 space-y-2">
           <p className="text-[10.5px] min-[380px]:text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#e4cfae] font-light">
-            Wedding Photography • Cinematography • Films
+            Wedding • Pre-Wedding • Cinematography • Videography
           </p>
           <div className="flex items-center justify-center space-x-2.5 sm:space-x-3 text-[10.5px] sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] text-[#a39e94] uppercase font-light">
             <span>Pune</span>

@@ -76,8 +76,8 @@ export default function Navbar() {
             <span className="font-serif text-lg min-[360px]:text-xl sm:text-2xl lg:text-[26px] tracking-[0.16em] sm:tracking-[0.22em] text-[#fcfbf7] font-normal uppercase group-hover:text-[#c8a97e] transition-colors duration-300 leading-none truncate">
               {SITE_CONFIG.brandName}
             </span>
-            <span className="text-[7.5px] sm:text-[9px] tracking-[0.22em] sm:tracking-[0.35em] text-[#c8a97e] uppercase font-light mt-1 truncate">
-              Wedding Films & Cinematography
+            <span className="text-[7.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.25em] text-[#c8a97e] uppercase font-light mt-1 truncate">
+              Photography & Films • Pune | Nashik | Malegaon
             </span>
           </Link>
 

@@ -11,11 +11,12 @@ export interface ServiceItem {
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'Weddings' | 'Candid' | 'Traditional' | 'Pre-Wedding' | 'Couple Portraits' | 'Cinematic';
+  category: 'Weddings' | 'Candid' | 'Traditional' | 'Pre-Wedding' | 'Couple Portraits';
   location: string;
   imageUrl: string;
   aspectRatio: 'portrait' | 'landscape' | 'square';
   caption: string;
+  instagramUrl?: string;
 }
 
 export interface FilmItem {
@@ -27,6 +28,7 @@ export interface FilmItem {
   duration: string;
   thumbnailUrl: string;
   videoUrl: string; // YouTube or embed link
+  youtubeUrl?: string; // Direct YouTube watch link
   isFeatured?: boolean;
 }
 
@@ -54,6 +56,7 @@ export interface InstagramPost {
   likes: string;
   aspectRatio?: 'portrait' | 'square';
   reelUrl?: string;
+  postUrl?: string;
 }
 
 export interface InquiryFormData {

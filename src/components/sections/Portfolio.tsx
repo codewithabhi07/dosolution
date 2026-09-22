@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Sparkles, MapPin, Maximize2 } from "lucide-react";
+import { Sparkles, MapPin, Maximize2, ExternalLink } from "lucide-react";
 import { PORTFOLIO_DATA, PORTFOLIO_CATEGORIES } from "@/data/portfolio";
 import { PortfolioItem } from "@/types";
+import { SITE_CONFIG } from "@/data/site";
 import GoldDivider from "@/components/ui/GoldDivider";
 import Lightbox from "@/components/ui/Lightbox";
+import { InstagramIcon } from "@/components/ui/BrandIcons";
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -99,16 +101,34 @@ export default function Portfolio() {
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 sm:opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
 
-                {/* Lightbox Expand Icon */}
-                <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-md border border-[#c5a059]/40 flex items-center justify-center text-white/90 group-hover:text-[#edd8a6] group-hover:border-[#edd8a6] opacity-90 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 shadow-lg">
-                  <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                {/* Top Action Icons: Expand & Instagram */}
+                <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-10 flex items-center gap-2">
+                  <a
+                    href={item.instagramUrl || SITE_CONFIG.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-md border border-[#c5a059]/40 hover:bg-[#c5a059] hover:text-black hover:border-transparent flex items-center justify-center text-white/90 transition-all duration-300 shadow-lg"
+                    title="View on @dosolution Instagram"
+                  >
+                    <InstagramIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  </a>
+
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-md border border-[#c5a059]/40 flex items-center justify-center text-white/90 group-hover:text-[#edd8a6] group-hover:border-[#edd8a6] opacity-90 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 shadow-lg">
+                    <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  </div>
                 </div>
 
                 {/* Bottom Overlay Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 z-10 space-y-1 sm:space-y-1.5 transform translate-y-0 sm:translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] font-mono block">
-                    {item.category}
-                  </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.25em] text-[#edd8a6] font-mono block">
+                      {item.category}
+                    </span>
+                    <span className="text-[9px] uppercase tracking-wider text-[#edd8a6]/80 font-mono hidden sm:inline-block">
+                      DO Solution Story
+                    </span>
+                  </div>
 
                   <h3 className="font-serif text-lg sm:text-2xl text-[#fbf9f5] group-hover:text-[#edd8a6] transition-colors leading-tight">
                     {item.title}
@@ -122,6 +142,20 @@ export default function Portfolio() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Explore Full Stories on Instagram CTA */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <a
+            href={SITE_CONFIG.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 hover:bg-[#c5a059]/20 text-[#fbf9f5] hover:text-[#edd8a6] border border-[#c5a059]/40 hover:border-[#edd8a6] rounded-sm font-bold text-xs uppercase tracking-[0.22em] transition-all duration-300 hover:scale-105 shadow-xl min-h-[48px]"
+          >
+            <InstagramIcon className="w-4 h-4 text-[#edd8a6]" />
+            <span>SEE DAILY REAL WEDDINGS ON INSTAGRAM ({SITE_CONFIG.instagramHandle})</span>
+            <ExternalLink className="w-3.5 h-3.5 text-[#edd8a6]" />
+          </a>
         </div>
 
         {/* Lightbox Modal */}

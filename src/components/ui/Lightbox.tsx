@@ -2,8 +2,9 @@
 
 import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight, MapPin, Tag } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MapPin, Tag, ExternalLink } from "lucide-react";
 import { PortfolioItem } from "@/types";
+import { InstagramIcon } from "@/components/ui/BrandIcons";
 
 interface LightboxProps {
   isOpen: boolean;
@@ -164,6 +165,20 @@ export default function Lightbox({
           <p className="text-[11px] sm:text-sm text-[#fcfbf7]/75 font-light mt-1 italic line-clamp-2 sm:line-clamp-none">
             "{currentItem.caption}"
           </p>
+
+          {/* Instagram Link Action */}
+          <div className="mt-3">
+            <a
+              href={currentItem.instagramUrl || "https://www.instagram.com/dosolution/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-[#c5a059]/20 text-[#edd8a6] border border-[#c5a059]/30 text-[10.5px] font-mono tracking-wider transition-colors"
+            >
+              <InstagramIcon className="w-3 h-3 text-[#edd8a6]" />
+              <span>View Story on Instagram (@dosolution)</span>
+              <ExternalLink className="w-2.5 h-2.5" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
